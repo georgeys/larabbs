@@ -24,8 +24,15 @@ class ImageUploadHandler
         $extension = strtolower($file->getClientOriginalExtension()) ?: 'png';
 
         // 拼接文件名，加前缀是为了增加辨析度，前缀可以是相关数据模型的 ID
-        // 值如：1_avatar.png(替换文件一个用户一天只保存一张头像)
-        $filename = $file_prefix . '_' . 'avatar'. '.' . $extension;
+
+        if ($folder=='avatar'){
+            // 值如：1_avatar.png(替换文件一个用户一天只保存一张头像)
+            $filename = $file_prefix . '_' . 'avatar'. '.' . $extension;
+        }else{
+            // 值如：1_1493521050_7BVc9v9ujP.png
+            $filename = $file_prefix . '_' . time() . '_' . Str::random(10) . '.' . $extension;
+        }
+
 
         // 如果上传的不是图片将终止操作
         if ( ! in_array($extension, $this->allowed_ext)) {
