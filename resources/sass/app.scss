@@ -36,16 +36,20 @@ body {
         border: 1px solid #ced4da;
         border-radius: 4px;
         padding: 3px;
+
     }
 }
 
 .footer{
-    height:30px;
+    height:50px;
     width: 100%;
+    border-color: #e7e7e7;
+    background-color: #fff;
     position:fixed;
     bottom:0px;
     z-index:-1;
-    background: #00b5ad;
+    border-bottom: 4px solid #00b5ad;
+    margin-bottom: 0px;
 }
 /* Topic Index Page */
 .topics-index-page {
