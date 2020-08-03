@@ -8,7 +8,7 @@ class RepliesTableSeeder extends Seeder
     public function run()
     {
         $replies = factory(Reply::class)
-            ->times(50)
+            ->times(150)
             ->create();
 
     }
