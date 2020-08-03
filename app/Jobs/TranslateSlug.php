@@ -15,13 +15,13 @@ class TranslateSlug implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    protected $topic;
+
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    protected $topic;
-
     public function __construct(Topic $topic)
     {
         // 队列任务构造器中接收了 Eloquent 模型，将会只序列化模型的 ID
