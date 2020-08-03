@@ -2,7 +2,7 @@
 
 function route_class()
 {
-    return str_replace('.', '-', Route::currentRouteName());
+    return str_replace('.', '-', \Illuminate\Support\Facades\Route::currentRouteName());
 }
 
 function category_nav_active($category_id)
@@ -13,5 +13,5 @@ function category_nav_active($category_id)
 function make_excerpt($value, $length = 200)
 {
     $excerpt = trim(preg_replace('/\r\n|\r|\n+/', ' ', strip_tags($value)));
-    return Str::limit($excerpt, $length);
+    return \Illuminate\Support\Str::limit($excerpt, $length);
 }
