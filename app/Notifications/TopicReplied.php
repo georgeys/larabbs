@@ -15,7 +15,7 @@ class TopicReplied extends Notification
     public $reply;
 
     /**
-     * Create a new notification instance.
+     * Create a new notifications instance.
      *
      * @return void
      */
@@ -26,7 +26,7 @@ class TopicReplied extends Notification
     }
 
     /**
-     * Get the notification's delivery channels.
+     * Get the notifications's delivery channels.
      *
      * @param  mixed  $notifiable
      * @return array
