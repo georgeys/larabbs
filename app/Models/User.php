@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -17,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
     sendEmailVerificationNotification() 发送 Email 认证的消息通知，触发邮件的发送；
     getEmailForVerification() 获取发送邮件地址，提供这个接口允许你自定义邮箱字段。
      */
-    use MustVerifyEmailTrait;
+    use MustVerifyEmailTrait,HasRoles;
 
     //引用notifiable 的notify （但是下面命名的一个同名的方法  所以起来一个别名）
     use Notifiable{
