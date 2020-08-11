@@ -9,8 +9,8 @@ class PagesController extends Controller
     //
     public function root()
     {
-
-        echo ini_get('memory_limit').PHP_EOL;
+//
+//        echo ini_get('memory_limit').PHP_EOL;
 
         return view('pages.root');
     }
