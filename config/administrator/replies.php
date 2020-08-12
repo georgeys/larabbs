@@ -32,7 +32,8 @@ return [
             'title'    => '话题',
             'sortable' => false,
             'output'   => function ($value, $model) {
-                return '<div style="max-width:260px">' . model_admin_link($model->topic, $model->topic) . '</div>';
+                //model_admin_link($model->topic, $model->topic)
+                return '<div style="max-width:260px">' .$value. '</div>';
             },
         ],
         'operation' => [
