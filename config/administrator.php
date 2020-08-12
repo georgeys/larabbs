@@ -23,7 +23,7 @@ return array(
      *
      * @type string
      */
-    'title' => config('app.name'),
+    'title' => env('APP_NAME','larabbs'),
 
     /*
      * The path to your model config directory
@@ -63,7 +63,14 @@ return array(
     'menu' => [
         '用户与权限' =>[
             'users',
+            'roles',
+            'permissions',
             ],
+        '内容管理'=>[
+            'categories',
+            'topics',
+            'replies'
+        ]
     ],
 
     /*
@@ -96,7 +103,7 @@ return array(
      *
      * @type string
      */
-    'home_page' => '',
+    'home_page' => 'users',
 
     /*
      * The route to which the user will be taken when they click the "back to site" button
@@ -117,7 +124,7 @@ return array(
      *
      * @type string
      */
-    'logout_path' => false,
+//    'logout_path' => false,
 
     /*
      * This is the key of the return path that is sent with the redirection to your login_action. Session::get('redirect') will hold the return URL.
