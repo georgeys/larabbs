@@ -22,8 +22,8 @@ class RepliesController extends Controller
 		$reply->topic_id = $request->topic_id;
         $reply->content = $request->input('content');
         $reply->save();
-       // dd($reply->topic->link());
-		return redirect()->to()->with('success', '评论创建成功！');
+       // dd();
+		return redirect()->to($reply->topic->link())->with('success', '评论创建成功！');
 	}
 
 
